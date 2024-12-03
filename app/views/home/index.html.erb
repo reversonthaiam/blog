@@ -1,0 +1,16 @@
+<div class="container">
+
+
+<h2>Posts</h2>
+<hr>
+<%= %>
+<h3>Admin: <%= @author %></h3>
+<% @posts.each do |post| %>
+  <p>
+    <%= post[:title]%> - <%= post[:body]%>
+  </p>
+<% end %>
+
+<%= link_to "Estudantes", estudantes_path %>
+
+</div>

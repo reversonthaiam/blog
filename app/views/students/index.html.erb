@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Lista de estudantes</h1>
+  <hr>
+  <% @students.each do |item| %>
+    <div>
+      <details>
+        <summary><%= item[:nome] %></summary>
+        <p><%= item[:telefone]%></p>
+      </details>
+    </div>
+  <% end %>
+  <%= link_to "home", home_path %>
+</div>
