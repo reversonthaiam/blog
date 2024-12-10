@@ -14,10 +14,12 @@
 
   </head>
 
-  <body>
+  <body class="">
     <header>
       <%= render "layouts/navbar"%>
     </header>
-    <%= yield %>
+    <div class="container mb-4">
+      <%= yield %>
+    </div>
   </body>
 </html>

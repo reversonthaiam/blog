@@ -1,0 +1,19 @@
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+
+<h1 class="mb-4 mt-4">Posts</h1>
+
+<div id="posts" class="list-group">
+  <% @posts.each do |post| %>
+    <div class="list-group-item mb-2">
+      <%= render post %>
+
+      <p>
+        <%= link_to "Show this post", post, class: "btn btn-primary btn-sm" %>
+      </p>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "New post", new_post_path, class: "btn btn-success mt-3" %>
