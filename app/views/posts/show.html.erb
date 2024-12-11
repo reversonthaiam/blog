@@ -1,13 +1,13 @@
 <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>
-
 <%= render @post %>
-
 <div class="mt-4">
   <div class="btn-group gap-2" role="group">
     <%= link_to "Edit this post", edit_post_path(@post), class: "btn btn-warning btn-sm" %>
     <%= link_to "Back to posts", posts_path, class: "btn btn-secondary btn-sm" %>
     <%= button_to "Destroy this post", @post, method: :delete, class: "btn btn-danger btn-sm", data: { confirm: "Are you sure you want to delete this post?" } %>
   </div>
+
+  <%= render "comments/form", post: @post %>
 </div>

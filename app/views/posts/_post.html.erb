@@ -6,6 +6,7 @@
     
     <p class="card-text">
       <strong>Views:</strong> <%= pluralize(post.views, "view") %>
+      <p>publicado por: <%= post.user.email %></p>
     </p>
 
     <p class="card-text">
