@@ -30,4 +30,16 @@ class CommentsController < ApplicationController
   def comment_params
       params.require(:comment).permit(:body)
   end
+
+  def update
+    @comment = @post.comments.find(params[:id])
+    respond_to do |format|
+        if @comment.update(comment_params)
+            format.html{redirect_to post_path(@post), notice: "Comentario atualizado"}
+        else
+            format.html{redirect_to post_path(@post), alert: "Erro na atualização"}
+
+        end
+    end
+  end
 end
