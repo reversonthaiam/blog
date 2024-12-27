@@ -1,9 +1,9 @@
 <%= form_with(model: [post, comment], class: "mb-3") do |f| %>
   <div class="mb-3 mt-4">
     <%= f.label :body, "Your Comment", class: "form-label" %>
-    <%= f.rich_text_area :body, rows: 5, placeholder: "Write your comment here..." %>
+    <%= f.rich_text_area :body, rows: 5, class: "form-control", placeholder: "Write your comment here..." %>
   </div>
   <div>
-    <%= f.submit "Reply", class: "btn btn-primary" %>
+    <%= f.submit submit_label, class: "btn btn-primary" %>
   </div>
 <% end %>

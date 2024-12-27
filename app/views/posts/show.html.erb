@@ -9,7 +9,7 @@
     <%= button_to "Destroy this post", @post, method: :delete, class: "btn btn-danger btn-sm", data: { confirm: "Are you sure you want to delete this post?" } %>
   </div>
 
-  <%= render "comments/form", post: @post, comment: @post.comments.build %>
+  <%= render "comments/form", post: @post, comment: @post.comments.build, submit_label: "Replay" %>
 
   <% @comments.each do |comment| %>
     <%= render "comments/comment", post: @post, comment: comment %>
